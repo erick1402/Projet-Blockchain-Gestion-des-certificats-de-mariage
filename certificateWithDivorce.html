@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      
+      padding: 20px;
+      
+      
+    }
+
+    .form-section {
+      margin-bottom: 20px;
+    }
+
+    .form-section label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .form-section input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .status {
+      margin-top: 16px;
+      font-weight: bold;
+     
+    }
+
+    .btn {
+      background-color: #2335da;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-check {
+      background-color: #2196F3;
+    }
+  </style>
+
+
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.0/dist/web3.min.js"></script>
+    <script src="./certificateWithDivorce.js"></script>
+  <div class="container">
+    <div class="row">
+        <div class="col sm-4" style="margin-right: 20px;">
+    <div class="form-section">
+      <h2 class="text-center">Nouveau Contract de mariage</h2>
+      <label for="spouse1">mari:</label>
+      <input type="text" id="spouse1" placeholder="Nom du mari">
+
+      <label for="spouse2">Femme:</label>
+      <input type="text" id="spouse2" placeholder="Nom de la femme">
+
+      <button id="createContractBtn" class="btn btn-info" style="float: right;">Créer Contrat</button><br>
+      <div id="status" class="status"></div>
+    </div><br>
+
+    <div class="form-section">
+      <h2 class="text-center">Verification du Contract de mariage</h2>
+      
+      <label for="contractAddress">Adresse du contrat:</label>
+      <input type="text" id="contractAddress" placeholder="contrat de l'adresse à verifier"> <br>
+    
+      <button class="btn btn-info" id="btnVerif"  style="float: right;">Verifier Contract</button><br><br>
+
+      <table id="table" class="table table-striped table-hover" style="margin-top: 5%";>
+        <thead>
+          <tr>
+        
+          <th scope="col">Mari</th>
+          <th scope="col">Femme</th>
+          <th scope="col">Situation</th>
+          </tr>
+          </thead>
+                    
+      </table>
+    
+      
+    </div>
+        </div>
+        <div class="col-sm-4 offset-2">
+
+            <div class="form-section">
+                <h2 class="text-center">Gestion de divorce</h2>
+                
+                <label for="contractAddress">Adresse du contrat:</label>
+                <input type="text" id="contractAddress" placeholder="contrat de l'adresse à divorcer"> 
+          
+                <button id="btnDivorce" class="btn btn-info" style="float: right;">Divorcer</button><br>
+                <div id="status1" class="status"></div>
+              </div><br>
+
+        </div>
+    </div>
+    
+  </div>
+
+
+</body>
+</html>
